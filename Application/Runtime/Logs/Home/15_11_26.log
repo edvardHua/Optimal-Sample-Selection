@@ -1,0 +1,281 @@
+[ 2015-11-26T14:04:56+08:00 ] ::1 /Optimal-Sample-Selection/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001183s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001469s ]
+
+[ 2015-11-26T14:05:22+08:00 ] ::1 /Optimal-Sample-Selection/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000831s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001405s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001574s ]
+
+[ 2015-11-26T14:05:34+08:00 ] ::1 /Optimal-Sample-Selection/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000775s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001464s ]
+
+[ 2015-11-26T14:07:04+08:00 ] ::1 /Optimal-Sample-Selection/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000669s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001127s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001267s ]
+
+[ 2015-11-26T14:12:32+08:00 ] ::1 /Optimal-Sample-Selection/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000959s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001181s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001328s ]
+
+[ 2015-11-26T14:13:25+08:00 ] ::1 /Optimal-Sample-Selection/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000797s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001341s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001495s ]
+
+[ 2015-11-26T14:56:12+08:00 ] ::1 /Optimal-Sample-Selection/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000667s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002154s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002315s ]
+
+[ 2015-11-26T15:02:55+08:00 ] ::1 /Optimal-Sample-Selection/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000085s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001324s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001242s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001387s ]
+
+[ 2015-11-26T15:19:39+08:00 ] ::1 /Optimal-Sample-Selection/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000988s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001236s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001410s ]
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant m - assumed 'm' C:\wamp\www\Optimal-Sample-Selection\Application\Home\Controller\IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001231s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001371s ]
+
+[ 2015-11-26T15:21:16+08:00 ] ::1 /Optimal-Sample-Selection/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000687s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001273s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001439s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001675s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001967s ]
+
+[ 2015-11-26T15:21:37+08:00 ] ::1 /Optimal-Sample-Selection/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000109s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001618s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001142s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001300s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001468s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001627s ]
+
+[ 2015-11-26T15:22:10+08:00 ] ::1 /Optimal-Sample-Selection/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000649s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001920s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002205s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001568s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001773s ]
+
+[ 2015-11-26T15:26:06+08:00 ] ::1 /Optimal-Sample-Selection/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000824s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001151s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001291s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001213s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001363s ]
+
+[ 2015-11-26T15:26:40+08:00 ] ::1 /Optimal-Sample-Selection/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001008s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001141s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001278s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001131s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001286s ]
+
+[ 2015-11-26T15:27:55+08:00 ] ::1 /Optimal-Sample-Selection/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001273s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002125s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002403s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002084s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002386s ]
+
+[ 2015-11-26T15:28:22+08:00 ] ::1 /Optimal-Sample-Selection/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001107s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001686s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001944s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001160s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001306s ]
+
+[ 2015-11-26T15:28:37+08:00 ] ::1 /Optimal-Sample-Selection/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000859s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001281s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001437s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001191s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001334s ]
+
+[ 2015-11-26T15:29:00+08:00 ] ::1 /Optimal-Sample-Selection/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001136s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001222s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001377s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001206s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001365s ]
+
+[ 2015-11-26T15:32:44+08:00 ] ::1 /Optimal-Sample-Selection/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000713s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001566s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001258s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001410s ]
+
+[ 2015-11-26T15:35:57+08:00 ] ::1 /Optimal-Sample-Selection/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000075s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000906s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001578s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001183s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001327s ]
+
+[ 2015-11-26T15:36:47+08:00 ] ::1 /Optimal-Sample-Selection/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000663s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001820s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002045s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002278s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002590s ]
+
+[ 2015-11-26T15:37:54+08:00 ] ::1 /Optimal-Sample-Selection/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000913s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001711s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001875s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001741s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001942s ]
+
