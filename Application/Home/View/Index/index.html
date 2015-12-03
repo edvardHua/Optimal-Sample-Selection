@@ -45,23 +45,24 @@
             <p>
             </p>
 
-            <form id="form_optimal" class="pure-form combination" method="post" action="{:U('Index/optimal')}">
-
-                <fieldset>
-                    <input name="n" type="text" placeholder="eg: 1,2,3,4..." class="pure-input-1">
-                    <input name="k" type="text" placeholder="k" class="pure-input-3-1">
-                    <input name="j" type="text" placeholder="j" class="pure-input-3-1">
-                    <input name="s" type="text" placeholder="s" class="pure-input-3-1 pure-input-3-3">
-
-                    <button id="btn_submit" class="pure-button pure-button-primary">Submit</button>
-                    <button class="pure-button pure-button-active">Random Generate</button>
-                </fieldset>
+            <form id="form_optimal" role="form" class="pure-form combination" method="post" action="{:U('Index/optimal')}">
+                <div class="form-group">
+                    <fieldset>
+                        <input name="n" type="text" placeholder="eg: 1,2,3,4..." class="pure-input-1">
+                        <input name="k" type="text" placeholder="k" class="pure-input-3-1">
+                        <input name="j" type="text" placeholder="j" class="pure-input-3-1">
+                        <input name="s" type="text" placeholder="s" class="pure-input-3-1 pure-input-3-3">
+    
+                        <button id="btn_submit" class="pure-button pure-button-primary">Submit</button>
+                        <button class="pure-button pure-button-active">Random Generate</button>
+                    </fieldset>
+                </div>
             </form>
 
 
-            <h2 class="content-subhead">Result</h2>
+            <h2 class="content-subhead">Result:</h2>
 
-            <p class="result">
+            <p class="result" style="color:rgb(255,69,0)">
                 {$result}
             </p>
 
@@ -84,18 +85,16 @@
 //            return res;
 //        }
 
-        $('#btn_submit').change(function(){
-            if(isLegal == true) {
+        $('#btn_submit').click(function(){
                 $('#form_optimal').submit();
                 $('#form_optimal').waitMe({
                     effect: 'stretch',
-                    text: "{:L('_WAIT_')}",
+                    text: "Please wait...",
                     bg: 'rgba(255,255,255,0.7)',
                     color:'rgb(60, 198, 198)',
                     sizeW:'',
                     sizeH:''
                 });
-            }
         });
     });
 </script>

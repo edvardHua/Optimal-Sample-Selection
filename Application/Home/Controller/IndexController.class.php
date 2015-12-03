@@ -7,22 +7,15 @@ class IndexController extends Controller
 {
     public function index()
     {
-//        $elements = range(1,10,1);
-//        $result = array();
-//        self::combination($elements, 10, 3, $result, 3);
-//        sort($result);
-//        var_dump($result);
-//        self::conditionOne(array(1, 2, 3, 4, 5), 5, 4, 3);
-
-//        self::conditionTwo(array(1,2,3,4,5),5,4,4,3);
+        $strResult = session('result');
+        if(!empty($strResult))
+            $this->assign('result',$strResult);
         $this->display();
     }
 
     public function optimal()
     {
-//        $data = I('post.');
-//        var_dump($data);
-//        die;
+        ini_set('memory_limit','1024M');
         self::func_param_empty_check(array('n','k','j','s'));
 
         $data = I('post.');
@@ -49,9 +42,10 @@ class IndexController extends Controller
         foreach($result as $key => $value){
             $strResult = $strResult.'<br/>'.$value.'<br/>';
         }
-        echo $strResult;
-//        $this->assign('result',$strResult);
-//        $this->redirect();
+        // echo $strResult;
+        // $this->assign('result',$strResult);
+        session('result',$strResult);
+        $this->redirect('index');
     }
 
     /**
@@ -140,12 +134,13 @@ class IndexController extends Controller
         self::combination($nArray, $n, $k, $kCombination, $k); // k from n
         self::combination($nArray, $n, $j, $jCombination, $j); // j from n
 
-        var_dump($kCombination);
-        var_dump($jCombination);
-
-
-
-//        $s_from_k = array();
+        // var_dump($kCombination);
+        // var_dump($jCombination);
+        
+        sort($kCombination);
+        sort($jCombination);
+        
+        $s_from_k = array();
         foreach ($kCombination as $skKey => $skValue) {
             $tmp = explode(' ', $skValue);
             $item = array();
@@ -168,7 +163,7 @@ class IndexController extends Controller
         $matrix = array();
         foreach ($s_from_k as $skKey => $skValue) {
             foreach ($s_from_j as $sjKey => $sjValue) {
-                $intersection = array_intersect($skValue, $skValue); // cal intersection. if no empty set matrix($skKey , $sjKey) = 1, otherwise 0
+                $intersection = array_intersect($skValue, $sjValue); // cal intersection. if no empty set matrix($skKey , $sjKey) = 1, otherwise 0
                 if (empty($intersection)) {
                     $matrix[$skKey][$sjKey] = 0;
                 } else {
@@ -186,9 +181,12 @@ class IndexController extends Controller
 
         $result = array();
         $exitCondition = count($s_from_j);
+        // p($matrix);
+        // die;
+        // p($s_from_j);
         do{
             // init with the first element
-            $keyValue = array_keys($skKey);
+            $keyValue = array_keys($matrix);
             $maxIndex = $keyValue[0];
             $maxColumn = $matrix[$keyValue[0]]['columnCount'];
             // find the max columnCount
@@ -212,9 +210,12 @@ class IndexController extends Controller
                     }
                 }
             }
+            p($exitCondition);
+            // die;
         }while($exitCondition != 0);
 //        var_dump($result);
-        var_dump($s_from_k);
+        // var_dump($s_from_k);
+        return $result;
     }
 
     /**
