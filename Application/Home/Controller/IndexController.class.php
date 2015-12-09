@@ -8,15 +8,15 @@ class IndexController extends Controller
     public function index()
     {
         $strResult = session('result');
-        if(!empty($strResult))
-            $this->assign('result',$strResult);
+        if (!empty($strResult))
+            $this->assign('result', $strResult);
         $this->display();
     }
 
     public function optimal()
     {
-        ini_set('memory_limit','1024M');
-        self::func_param_empty_check(array('n','k','j','s'));
+        ini_set('memory_limit', '1024M');
+        self::func_param_empty_check(array('n', 'k', 'j', 's'));
 
         $data = I('post.');
         $n = str_replace(" ", "", $data['n']);
@@ -27,24 +27,33 @@ class IndexController extends Controller
         $j = $data['j'];
         $s = $data['s'];
 
-        if($k < $j)
+        if ($k < $j)
             $this->error('k < j invalid input');
-        if($j < $s)
+        if ($j < $s)
             $this->error('j < s invalid input');
-        if($k < $s)
+        if ($k < $s)
             $this->error('k < s invalid input');
 
-        if($k > $j && $j == $s)
-            $result = self::conditionOne($nArray,$nCount,$k,$j);
+        G('begin');
+        if ($k > $j && $j == $s)
+            $result = self::conditionOne($nArray, $nCount, $k, $j);
+        else if ($k == $j && $j > $s)
+            $result = self::conditionThree($nArray, $nCount, $k);
         else
-            $result = self::conditionTwo($nArray,$nCount,$k,$j,$s);
-        $strResult = '';
-        foreach($result as $key => $value){
-            $strResult = $strResult.'<br/>'.$value.'<br/>';
+            $result = self::conditionTwo($nArray, $nCount, $k, $j, $s);
+
+        $totalSubSet = count($result);
+        $strResult = 'Total optimal sub set: ' . $totalSubSet . '<br/>';
+        foreach ($result as $key => $value) {
+            $strResult = $strResult . '<br/>' . $value . '<br/>';
         }
-        // echo $strResult;
-        // $this->assign('result',$strResult);
-        session('result',$strResult);
+
+        //        G('end');
+        //        echo G('begin', 'end', 6) . 's';
+        //        echo '<br/>';
+        //        echo G('begin', 'end', 'm') . 'kb';
+//
+        session('result', $strResult);
         $this->redirect('index');
     }
 
@@ -63,7 +72,7 @@ class IndexController extends Controller
     }
 
     /**
-     * s=j<k
+     * s = j < k
      */
     public function conditionOne($nArray, $n, $k, $j)
     {
@@ -71,8 +80,9 @@ class IndexController extends Controller
         $jCombination = array(); // j elements combination
         self::combination($nArray, $n, $k, $kCombination, $k);
         self::combination($nArray, $n, $j, $jCombination, $j);
-        sort($kCombination);
-        sort($jCombination);
+//        sort($kCombination);
+//        sort($jCombination);
+
 //        var_dump($A);
 //        var_dump($B);
         $j_from_k = array();
@@ -84,20 +94,17 @@ class IndexController extends Controller
 
             self::combination($itemArray, $itemSize, $j, $C, $j);
             $j_from_k[$key] = $C;
-//            var_dump($C);
-            $countC = count($C);
-            for ($m = 0; $m < $countC; $m++) {
-                $index = array_search($C[$m], $jCombination);
-                if ($index !== false) { // search success, must use !== to prevent 0 case
-                    $hitMap[$key][$jCombination[$index]] = 1;
-                }
+            foreach ($jCombination as $inKey => $inValue) {
+                $index = array_search($jCombination[$inKey], $C);
+                if ($index !== false) // search success, must use !== to prevent 0 case
+                    $hitMap[$key][$jCombination[$inKey]] = 1;
             }
+
         }
 //        var_dump($hitMap);
         $result = array();
         do {
             $index = self::maxHit($hitMap);
-//            var_dump($index);
             array_push($result, $kCombination[$index]);
             unset($kCombination[$index]);
             unset($j_from_k[$index]);
@@ -107,14 +114,13 @@ class IndexController extends Controller
 //            var_dump($B);
             unset($hitMap);
             foreach ($j_from_k as $key => $value) {
-                $countC = count($value);
-                for ($m = 0; $m < $countC; $m++) {
-                    $index = array_search($value[$m], $jCombination);
-                    if ($index !== false) { // search success, must use !== to prevent 0 case
-                        $hitMap[$key][$jCombination[$index]] = 1;
-                    }
+                foreach ($jCombination as $inKey => $inValue) {
+                    $index = array_search($jCombination[$inKey], $value);
+                    if ($index !== false) // search success, must use !== to prevent 0 case
+                        $hitMap[$key][$jCombination[$inKey]] = 1;
                 }
             }
+
 //            var_dump($hitMap);
         } while (!empty($jCombination));
 
@@ -123,7 +129,36 @@ class IndexController extends Controller
     }
 
     /**
-     * s < j <= k
+     * s < j = k
+     */
+    public function conditionThree($nArray, $n, $k)
+    {
+        $kCombination = array();
+
+        self::combination($nArray, $n, $k, $kCombination, $k); // k from n
+
+        $result = array();
+        $remain = array();
+        foreach ($kCombination as $key => $value) {
+            $tmp = $nArray;
+            foreach ($tmp as $inKey => $inValue) {
+                $index = strpos($value, $inValue);
+                if ($index !== false)
+                    unset($tmp[$inKey]);
+            }
+            $intersect = array_intersect($remain,$tmp);
+            if(empty($intersect)){
+                $remain = array_merge($remain,$tmp);
+                array_push($result,$value);
+                if($n == count($remain))
+                    break;
+            }
+        }
+        return $result;
+    }
+
+    /**
+     * s < j < k
      */
     public function conditionTwo($nArray, $n, $k, $j, $s)
     {
@@ -136,10 +171,10 @@ class IndexController extends Controller
 
         // var_dump($kCombination);
         // var_dump($jCombination);
-        
+
         sort($kCombination);
         sort($jCombination);
-        
+
         $s_from_k = array();
         foreach ($kCombination as $skKey => $skValue) {
             $tmp = explode(' ', $skValue);
@@ -184,7 +219,7 @@ class IndexController extends Controller
         // p($matrix);
         // die;
         // p($s_from_j);
-        do{
+        do {
             // init with the first element
             $keyValue = array_keys($matrix);
             $maxIndex = $keyValue[0];
@@ -204,15 +239,15 @@ class IndexController extends Controller
             // mark value 1 to 0
             foreach ($s_from_j as $sjKey => $sjValue) {
                 foreach ($s_from_k as $skKey => $skValue) {
-                    if($tmp[$sjKey] == 1){
+                    if ($tmp[$sjKey] == 1) {
                         $matrix[$skKey][$sjKey] = 0;
-                        $matrix[$skKey]['columnCount'] --;
+                        $matrix[$skKey]['columnCount']--;
                     }
                 }
             }
-            p($exitCondition);
+//            p($exitCondition);
             // die;
-        }while($exitCondition != 0);
+        } while ($exitCondition != 0);
 //        var_dump($result);
         // var_dump($s_from_k);
         return $result;
@@ -227,8 +262,10 @@ class IndexController extends Controller
         $compare = count($variable[0]);
         foreach ($variable as $key => $value) {
             $tmp = count($value);
-            if ($tmp > $compare)
+            if ($tmp > $compare) {
                 $index = $key;
+                $compare = $tmp;
+            }
         }
         return $index;
     }
