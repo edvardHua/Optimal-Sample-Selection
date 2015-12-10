@@ -37,8 +37,6 @@ class IndexController extends Controller
         G('begin');
         if ($k > $j && $j == $s)
             $result = self::conditionOne($nArray, $nCount, $k, $j);
-        else if ($k == $j && $j > $s)
-            $result = self::conditionThree($nArray, $nCount, $k);
         else
             $result = self::conditionTwo($nArray, $nCount, $k, $j, $s);
 
@@ -48,11 +46,9 @@ class IndexController extends Controller
             $strResult = $strResult . '<br/>' . $value . '<br/>';
         }
 
-        //        G('end');
-        //        echo G('begin', 'end', 6) . 's';
-        //        echo '<br/>';
-        //        echo G('begin', 'end', 'm') . 'kb';
-//
+//        $fp = fopen('result.txt',"rw");
+        file_put_contents('result.txt','n='.$nCount.' k='.$k.' j='.$j.' s='.$s.PHP_EOL,FILE_APPEND );
+        file_put_contents('result.txt',$strResult,FILE_APPEND );
         session('result', $strResult);
         $this->redirect('index');
     }
@@ -129,35 +125,6 @@ class IndexController extends Controller
     }
 
     /**
-     * s < j = k
-     */
-    public function conditionThree($nArray, $n, $k)
-    {
-        $kCombination = array();
-
-        self::combination($nArray, $n, $k, $kCombination, $k); // k from n
-
-        $result = array();
-        $remain = array();
-        foreach ($kCombination as $key => $value) {
-            $tmp = $nArray;
-            foreach ($tmp as $inKey => $inValue) {
-                $index = strpos($value, $inValue);
-                if ($index !== false)
-                    unset($tmp[$inKey]);
-            }
-            $intersect = array_intersect($remain,$tmp);
-            if(empty($intersect)){
-                $remain = array_merge($remain,$tmp);
-                array_push($result,$value);
-                if($n == count($remain))
-                    break;
-            }
-        }
-        return $result;
-    }
-
-    /**
      * s < j < k
      */
     public function conditionTwo($nArray, $n, $k, $j, $s)
@@ -203,22 +170,14 @@ class IndexController extends Controller
                     $matrix[$skKey][$sjKey] = 0;
                 } else {
                     $matrix[$skKey][$sjKey] = 1;
-                    if (!isset($matrix[$skKey]['columnCount'])) // count of 1 value
-                        $matrix[$skKey]['columnCount'] = 1;
-                    else
-                        $matrix[$skKey]['columnCount']++;
+                    $matrix[$skKey]['columnCount']++;
                 }
 
             }
         }
 
-//        var_dump($matrix);
-
         $result = array();
         $exitCondition = count($s_from_j);
-        // p($matrix);
-        // die;
-        // p($s_from_j);
         do {
             // init with the first element
             $keyValue = array_keys($matrix);
@@ -234,22 +193,24 @@ class IndexController extends Controller
             array_push($result, $kCombination[$maxIndex]);
             $exitCondition -= $maxColumn;
 
+            if($exitCondition == 0)
+                break;
+
             $tmp = $matrix[$maxIndex];
             unset($matrix[$maxIndex]);
             // mark value 1 to 0
             foreach ($s_from_j as $sjKey => $sjValue) {
                 foreach ($s_from_k as $skKey => $skValue) {
                     if ($tmp[$sjKey] == 1) {
-                        $matrix[$skKey][$sjKey] = 0;
-                        $matrix[$skKey]['columnCount']--;
+                        if($matrix[$skKey][$sjKey] == 1){
+                            $matrix[$skKey][$sjKey] = 0;
+                            $matrix[$skKey]['columnCount']--;
+                        }
                     }
                 }
             }
-//            p($exitCondition);
-            // die;
+
         } while ($exitCondition != 0);
-//        var_dump($result);
-        // var_dump($s_from_k);
         return $result;
     }
 
