@@ -16,6 +16,7 @@ class IndexController extends Controller
     public function optimal()
     {
         ini_set('memory_limit', '1024M');
+        set_time_limit(0);
         self::func_param_empty_check(array('n', 'k', 'j', 's'));
 
         $data = I('post.');
@@ -35,21 +36,19 @@ class IndexController extends Controller
             $this->error('k < s invalid input');
 
         G('begin');
-        if ($k > $j && $j == $s)
-            $result = self::conditionOne($nArray, $nCount, $k, $j);
-        else
-            $result = self::conditionTwo($nArray, $nCount, $k, $j, $s);
+        $result = self::run($nArray, $nCount, $k, $j, $s);
 
         $totalSubSet = count($result);
-        $strResult = 'Total optimal sub set: ' . $totalSubSet . '<br/>';
+        $strResult = 'Total cost time:' .G("begin","end")."s"."<br/>".' Total optimal sub set: ' . $totalSubSet. '<br/>';
         foreach ($result as $key => $value) {
             $strResult = $strResult . '<br/>' . $value . '<br/>';
         }
 
-//        $fp = fopen('result.txt',"rw");
-        file_put_contents('result.txt','n='.$nCount.' k='.$k.' j='.$j.' s='.$s.PHP_EOL,FILE_APPEND );
-        file_put_contents('result.txt',$strResult,FILE_APPEND );
+//        $fp = fopen('result.html',"rw");
+        file_put_contents('result.html', 'n=' . $nCount . ' k=' . $k . ' j=' . $j . ' s=' . $s .' .G("begin","end")."s".<br/>', FILE_APPEND);
+        file_put_contents('result.html', $strResult, FILE_APPEND);
         session('result', $strResult);
+
         $this->redirect('index');
     }
 
@@ -67,69 +66,9 @@ class IndexController extends Controller
         }
     }
 
-    /**
-     * s = j < k
-     */
-    public function conditionOne($nArray, $n, $k, $j)
+    public function run($nArray, $n, $k, $j, $s)
     {
-        $kCombination = array(); // k elements combination
-        $jCombination = array(); // j elements combination
-        self::combination($nArray, $n, $k, $kCombination, $k);
-        self::combination($nArray, $n, $j, $jCombination, $j);
-//        sort($kCombination);
-//        sort($jCombination);
-
-//        var_dump($A);
-//        var_dump($B);
-        $j_from_k = array();
-        $hitMap = array(); // each $A hit map, count is the ratio
-        foreach ($kCombination as $key => $value) {
-            $itemArray = explode(' ', $value); // use blank to split string to array
-            $itemSize = count($itemArray);
-            $C = array();
-
-            self::combination($itemArray, $itemSize, $j, $C, $j);
-            $j_from_k[$key] = $C;
-            foreach ($jCombination as $inKey => $inValue) {
-                $index = array_search($jCombination[$inKey], $C);
-                if ($index !== false) // search success, must use !== to prevent 0 case
-                    $hitMap[$key][$jCombination[$inKey]] = 1;
-            }
-
-        }
-//        var_dump($hitMap);
-        $result = array();
-        do {
-            $index = self::maxHit($hitMap);
-            array_push($result, $kCombination[$index]);
-            unset($kCombination[$index]);
-            unset($j_from_k[$index]);
-            $excludeItem = array_keys($hitMap[$index]); // transform to do diff opt
-//            var_dump($excludeItem);
-            $jCombination = array_diff($jCombination, $excludeItem);
-//            var_dump($B);
-            unset($hitMap);
-            foreach ($j_from_k as $key => $value) {
-                foreach ($jCombination as $inKey => $inValue) {
-                    $index = array_search($jCombination[$inKey], $value);
-                    if ($index !== false) // search success, must use !== to prevent 0 case
-                        $hitMap[$key][$jCombination[$inKey]] = 1;
-                }
-            }
-
-//            var_dump($hitMap);
-        } while (!empty($jCombination));
-
-//        var_dump($result);
-        return $result;
-    }
-
-    /**
-     * s < j < k
-     */
-    public function conditionTwo($nArray, $n, $k, $j, $s)
-    {
-
+        ini_set('memory_limit', '1024M');
         $kCombination = array();
         $jCombination = array();
 
@@ -172,7 +111,6 @@ class IndexController extends Controller
                     $matrix[$skKey][$sjKey] = 1;
                     $matrix[$skKey]['columnCount']++;
                 }
-
             }
         }
 
@@ -193,7 +131,7 @@ class IndexController extends Controller
             array_push($result, $kCombination[$maxIndex]);
             $exitCondition -= $maxColumn;
 
-            if($exitCondition == 0)
+            if ($exitCondition == 0)
                 break;
 
             $tmp = $matrix[$maxIndex];
@@ -202,7 +140,7 @@ class IndexController extends Controller
             foreach ($s_from_j as $sjKey => $sjValue) {
                 foreach ($s_from_k as $skKey => $skValue) {
                     if ($tmp[$sjKey] == 1) {
-                        if($matrix[$skKey][$sjKey] == 1){
+                        if ($matrix[$skKey][$sjKey] == 1) {
                             $matrix[$skKey][$sjKey] = 0;
                             $matrix[$skKey]['columnCount']--;
                         }
@@ -212,23 +150,6 @@ class IndexController extends Controller
 
         } while ($exitCondition != 0);
         return $result;
-    }
-
-    /**
-     * max count in array
-     */
-    private static function maxHit($variable)
-    {
-        $index = 0;
-        $compare = count($variable[0]);
-        foreach ($variable as $key => $value) {
-            $tmp = count($value);
-            if ($tmp > $compare) {
-                $index = $key;
-                $compare = $tmp;
-            }
-        }
-        return $index;
     }
 
     /**
